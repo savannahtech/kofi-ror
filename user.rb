@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :hits
 
   def cached_count_hits
-    Rails.cache.fetch("user_#{id}_hit_counts", expires_in: 1.hour) do
+    Rails.cache.fetch("user_#{id}_hit_counts", expires_in: 10.minutes) do
       count_hits
     end
   end
@@ -15,6 +15,6 @@ class User < ApplicationRecord
 
   # Example timezone for user in Australia
   def timezone
-    'Australia/Sydney'
+    'Australia Timezone'
   end
 end
