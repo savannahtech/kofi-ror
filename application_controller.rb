@@ -17,7 +17,7 @@ class ApplicationController < ActionController::API
   end
 
   def check_user_quota
-    render json: { error: 'over quota' } if current_user.cached_count_hits >= 10_000
+    render json: { error: 'over quota' } if current_user.count_hits >= 10_000
   end
 
   def update_user_quota

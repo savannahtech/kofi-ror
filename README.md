@@ -28,3 +28,10 @@ Answer:
 - Assuming this api is authenticated, this can be possible most likely when client is automating thier requests.
   A solution is to rate limit the api. We can achieve that with this gem https://github.com/ejfinneran/ratelimit
   see implementation in ratelimiter and usage in application_controller
+
+## #4
+
+Acme's development team has reported working with the code base is difficult due to accumulated technical debt and bad coding practices. They've asked the community to help them refactor the code so it's clean, readable, maintainable, and well-tested.
+
+Answer:
+Encapsulate the hit service into a service object this provides a single point failure and simplifies testing
